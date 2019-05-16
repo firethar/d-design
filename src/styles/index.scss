@@ -30,10 +30,11 @@ body {
   margin: 0 auto;
 }
 .container {
-  margin: 0 auto;
   max-width: 1440px;
   width: 1280px;
+  margin: 0 auto;
 }
+
 
 /* footer */
 .footer__links {
@@ -54,41 +55,41 @@ body {
       }
     }
   }
-
   .fb-link {
     position: relative;
     display: block;
-    width: 20px; height: 20px;
-    padding: 20px;
-  
+    width: 20px; 
+    height: 20px;
     margin: 0 40px;
-    text-indent: -99999px;
+    padding: 20px;
     background: transparent url('/src/assets/facebook-logo.png') no-repeat center center;
     background-size: 30%;
+    text-indent: -99999px;
   }
-
 }
 
 
 
 
 /** common **/
-.bordered-link::after {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #98474f;
-  transform: translate(-50%, -50%);
-  transition: all ease 0.5s;
-
+.bordered-link {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #98474f;
+    transform: translate(-50%, -50%);
+    transition: all ease 0.5s;
+  }
   &:hover::after {
     width: 80%;
     height: 80%;
   }
 }
+
 .form__button--submit {
   .bordered-link:hover::after {
     width: 90%;
