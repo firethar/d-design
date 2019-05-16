@@ -20,18 +20,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $colorWhite;
-  background: #000000;
+  background: #111111;
   font-family: 'caviar_dreams', Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
 .row {
+  position: relative;
   max-width: 1920px;
   margin: 0 auto;
 }
 .container {
   max-width: 1440px;
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -73,6 +74,7 @@ body {
 
 /** common **/
 .bordered-link {
+  position: relative;
   &::after {
     content: '';
     position: absolute;
