@@ -1,36 +1,36 @@
-$body-color: green;
+@import 'normalize';
+@import 'fonts';
+@import 'mixins';
 
-@font-face {
-  font-family: 'caviar_dreams';
-  src: url('../assets/fonts/caviardreams-webfont.woff2') format('woff2'),
-       url('../assets/fonts/caviardreams-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 100%;
 }
-@font-face {
-  font-family: 'caviar_dreams';
-  src: url('../assets/fonts/caviardreams_bold-webfont.woff2') format('woff2'),
-       url('../assets/fonts/caviardreams_bold-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'caviar_dreams';
-  src: url('../assets/fonts/caviardreams_bolditalic-webfont.woff2') format('woff2'),
-       url('../assets/fonts/caviardreams_bolditalic-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'caviar_dreams';
-  src: url('../assets/fonts/caviardreams_italic-webfont.woff2') format('woff2'),
-       url('../assets/fonts/caviardreams_italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  color: $body-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $colorWhite;
+  background: #000000;
   font-family: 'caviar_dreams', Arial, Helvetica, sans-serif;
   font-size: 16px;
+}
+
+.row {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 1280px;
 }
