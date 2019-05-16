@@ -34,3 +34,64 @@ body {
   max-width: 1440px;
   width: 1280px;
 }
+
+/* footer */
+.footer__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.footer__links {
+  li {
+    a {
+      text-decoration: none;
+      color: #98474f;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .fb-link {
+    position: relative;
+    display: block;
+    width: 20px; height: 20px;
+    padding: 20px;
+  
+    margin: 0 40px;
+    text-indent: -99999px;
+    background: transparent url('/src/assets/facebook-logo.png') no-repeat center center;
+    background-size: 30%;
+  }
+
+}
+
+
+
+
+/** common **/
+.bordered-link::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #98474f;
+  transform: translate(-50%, -50%);
+  transition: all ease 0.5s;
+
+  &:hover::after {
+    width: 80%;
+    height: 80%;
+  }
+}
+.form__button--submit {
+  .bordered-link:hover::after {
+    width: 90%;
+    height: 90%;
+  }
+}
