@@ -2,6 +2,15 @@
 @import 'fonts';
 @import 'mixins';
 
+
+@import 'header';
+@import 'bio';
+@import 'gallery';
+@import 'knowledge';
+@import 'contact';
+@import 'footer';
+
+
 html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -20,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $colorWhite;
-  background: #111111 url(../assets/page-bg.png) center top repeat;
+  background: #111111 url(/src/assets/images/page-bg.png) center top repeat;
   font-family: 'caviar_dreams', Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
@@ -37,44 +46,10 @@ body {
 }
 
 
-/* footer */
-.footer__links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-.footer__links {
-  li {
-    a {
-      text-decoration: none;
-      color: #98474f;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  .fb-link {
-    position: relative;
-    display: block;
-    width: 20px; 
-    height: 20px;
-    margin: 0 40px;
-    padding: 20px;
-    background: transparent url('/src/assets/facebook-logo.png') no-repeat center center;
-    background-size: 30%;
-    text-indent: -99999px;
-  }
-}
-
-
-
-
 /** common **/
 .bordered-link {
   position: relative;
+  display: block;
   &::after {
     content: '';
     position: absolute;
@@ -82,7 +57,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    border: 1px solid #98474f;
+    border: 1px solid $colorPrimary;
     transform: translate(-50%, -50%);
     transition: all ease 0.5s;
   }
@@ -92,9 +67,3 @@ body {
   }
 }
 
-.form__button--submit {
-  .bordered-link:hover::after {
-    width: 90%;
-    height: 90%;
-  }
-}
