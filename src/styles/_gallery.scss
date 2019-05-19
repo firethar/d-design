@@ -1,0 +1,22 @@
+.gallery {
+  h2 {
+    text-align: center;
+  }
+  .gallery__slider {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .slider__item {
+    transform: scale(1);
+    img {
+      max-width: 100%;
+    }
+  }
+  .slider__item.item__active {
+    z-index: 10;
+    transform: scale(1.4);
+  }
+}
