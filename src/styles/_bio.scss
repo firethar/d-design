@@ -1,0 +1,32 @@
+.bio__wrapper {
+  display: flex;
+  align-items: flex-start;
+  align-content: space-around;
+  justify-content: center;
+}
+  .bio__image {
+    margin: 0 50px;
+    width: 40%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .bio__content {
+    width: 60%;
+    padding-right: 5%;
+  }
+  .bio__copy {
+    margin: 50px 0;
+    font-size: 30px;
+  }
+  .bio__footer {
+    font-size: 18px;
+  }
+    .bio__name {
+      margin: 0 0 5px;
+    }
+    .bio__profession{
+      margin-top: 5px;
+      color: $colorPrimary;
+    }
