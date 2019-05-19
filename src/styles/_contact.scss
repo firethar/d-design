@@ -1,0 +1,120 @@
+
+.form-wrapper {
+//  max-width: 860px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ align-content: center;
+ margin: 0 auto;
+}
+.contact__form {
+  position: relative;
+  background: rgba(85, 85, 85, 0.46);
+  // width: 500px;
+  // margin: 0 auto;
+  margin-left: 500px;
+  box-sizing: border-box;
+  padding: 20px 150px 50px;
+  form {
+    // width: 500px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -500px;
+    display: block;
+    width: 500px;
+    height: 100%;
+    background: transparent url(/src/assets/images/contact-image.png) no-repeat center center;
+    background-size: contain;
+  }
+}
+
+.form__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 100%;
+}
+.form-group {
+  align-content: stretch;
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+}
+.form-group-short {
+  position: relative;
+  flex-basis: 50%;
+}
+.form-group-short:first-child {
+  padding-right: 50px;
+}
+.control-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease 0.5s;
+  font-size: 16px;
+  pointer-events: none;
+}
+.form-control {
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+}
+.form-control:focus + .control-label,
+.input--filled .control-label {
+  top: -20px;
+  font-size: 14px;
+}
+
+textarea.form-control {
+  background: transparent;
+  height: 3em;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #ffffff;
+  resize: none;
+  color: #ffffff;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ffffff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ffffff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ffffff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #ffffff;
+}
+
+.form__button-wrapper {
+  margin-top: 40px;
+}
+.contact__form .form__button--submit {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  padding: 15px;
+  border: 0px solid #98474f;
+  background: transparent;
+  color: #98474f;
+  font-size: 16px;
+}
+.form__button--submit.bordered-link:hover::after {
+  width: 90%;
+  height: 90%;
+}
