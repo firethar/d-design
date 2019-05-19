@@ -1,14 +1,14 @@
-@import 'normalize';
-@import 'fonts';
-@import 'mixins';
+@import '__normalize';
+@import '__fonts';
+@import '__mixins';
 
 
-@import 'header';
-@import 'bio';
-@import 'gallery';
-@import 'knowledge';
-@import 'contact';
-@import 'footer';
+@import '_header';
+@import '_bio';
+@import '_gallery';
+@import '_knowledge';
+@import '_contact';
+@import '_footer';
 
 
 html {
@@ -37,7 +37,7 @@ body {
 .row {
   position: relative;
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 0 auto 150px;
 }
 .container {
   max-width: 1440px;
@@ -47,6 +47,14 @@ body {
 
 
 /** common **/
+
+h2 {
+  font-size: 2.5em;
+  font-weight: normal;
+  color:  $colorPrimary;
+  text-transform: uppercase;
+}
+
 .bordered-link {
   position: relative;
   display: block;
