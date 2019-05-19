@@ -10,7 +10,7 @@
   <header class="page-header">
     <div class="row">
       <div class="container">
-        header
+        <img src="/src/assets/images/hero-1.png" alt="">
       </div>
     </div>
   </header>
@@ -18,7 +18,18 @@
   <section class="bio">
     <div class="row">
       <div class="container">
-        bio
+        <article class="bio__wrapper">
+          <figure class="bio__image">
+            <img src="/src/assets/images/bio-photo.png" alt="">
+          </figure>
+          <div class="bio__copy">
+            <p>"Gdy wokół głupota i nienawiść pustoszą Ziemię i chcą zawładnąć wszystkimi ludzkimi umysłami, siadam cicho w kącie, otwieram starą książkę i czytam... O czasach, kiedy godność i honor nie były pustymi słowami... czasach, w których o karierze, szacunku i pozycji w społeczeństwie decydowały ciężka praca, wiedza i doświadczenie... czasach, gdy pieniądze nie były najważniejsze, a ludzie spotykali się razem, wspólnie cieszyli i smucili, nie byli przywiązani do telefonów i odgrodzeni od siebie betonowymi ścianami zamkniętych osiedli. "</p>
+          </div>
+          <footer class="bio__footer">
+            <p class="bio__name">Diana Paszko</p>
+            <p class="bio__profession">Graphic Designer</p>
+          </footer>
+        </article>
       </div>
     </div>
   </section>
@@ -26,7 +37,12 @@
   <section class="gallery">
     <div class="row">
       <div class="container">
-        gallery
+        <h2>Galeria</h2>
+        <div class="gallery__slider">
+          <div class="slider__item"><img src="/src/assets/images/galeria-1-ponad-nami.png" alt=""></div>
+          <div class="slider__item"><img src="/src/assets/images/galeria-1-eternal.png" alt=""></div>
+          <div class="slider__item"><img src="/src/assets/images/galeria-1-percepcja.png" alt=""></div>
+        </div>
       </div>
     </div>
   </section>
@@ -34,7 +50,12 @@
   <section class="knowledge">
     <div class="row">
       <div class="container">
-        knowledge
+        <article>
+          <div class="knowledge__quote">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus velit, accumsan a tempor at, facilisis eget mi. In hac habitasse platea dictumst. Maecenas pulvinar ultricies laoreet. Ut sagittis tincidunt arcu, in facilisis metus. Donec semper auctor tortor at interdum. Donec erat nisi, ornare ac finibus mattis, convallis eget leo. Aenean gravida blandit ante. Curabitur feugiat augue vel dui maximus, convallis fermentum nulla pulvinar.
+              </p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -42,7 +63,33 @@
   <section class="contact">
     <div class="row">
       <div class="container">
-        contact
+        <div class="form-wrapper">
+          <div class="contact__image"></div>
+          <div class="contact__form">
+            <h2>Kontakt</h2>
+            <form name="form" method="post" action="#" id="contact_form">
+              <div class="form__inner-wrapper">
+                <div class="form-group">
+                  <div class="form-group-short">
+                    <input type="text" id="name" name="name" class="form-control" required="" />
+                    <label class="control-label" for="name">Imię i Nazwisko</label>
+                  </div>
+                  <div class="form-group-short">
+                    <input type="text" id="email" name="email" class="form-control" required="" />
+                    <label class="control-label" for="email">Twój email</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea id="message" name="message" class="form-control"></textarea>
+                  <label class="control-label" for="message">Treść</label>
+                </div>
+                <div class="form__button-wrapper">
+                  <button class="form__button--submit bordered-link" id="form_save" name="form_save" type="submit">WYŚLIJ WIADOMOŚĆ</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div> 
       </div>
     </div>
   </section>
@@ -58,7 +105,6 @@
       </div>
     </div>
   </footer>
-
 
 </body>
 </html>
