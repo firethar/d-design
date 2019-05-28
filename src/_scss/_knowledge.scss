@@ -15,7 +15,7 @@
     left: -5%;
     width: 35%;
     height: 100%;
-    background: transparent url(/src/assets/images/knowledge-1.png) no-repeat center center;
+    background: transparent url(../img/knowledge-1.png) no-repeat center center;
     background-size: cover;
     -webkit-mask-image:-webkit-gradient(linear, center center, right center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
@@ -28,7 +28,7 @@
     right: -5%;
     width: 35%;
     height: 100%;
-    background: transparent url(/src/assets/images/knowledge-2.png) no-repeat center center;
+    background: transparent url(../img/knowledge-2.png) no-repeat center center;
     background-size: cover;
     -webkit-mask-image:-webkit-gradient(linear, center center, left center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
