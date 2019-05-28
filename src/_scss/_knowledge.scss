@@ -31,7 +31,7 @@
     background: transparent url(../img/knowledge-2.png) no-repeat center center;
     background-size: cover;
     -webkit-mask-image:-webkit-gradient(linear, center center, left center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
     z-index: -1;
   }
 }
