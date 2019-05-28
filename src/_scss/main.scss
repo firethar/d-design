@@ -1,0 +1,77 @@
+@import '__normalize';
+@import '__fonts';
+@import '__mixins';
+
+
+@import '_header';
+@import '_bio';
+@import '_gallery';
+@import '_knowledge';
+@import '_contact';
+@import '_footer';
+
+
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $colorWhite;
+  background: #111111 url(../img/page-bg.png) center top repeat;
+  font-family: 'caviar_dreams', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.row {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto 150px;
+}
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/** common **/
+
+h2 {
+  font-size: 2.5em;
+  font-weight: normal;
+  color:  $colorPrimary;
+  text-transform: uppercase;
+}
+
+.bordered-link {
+  position: relative;
+  display: block;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $colorPrimary;
+    transform: translate(-50%, -50%);
+    transition: all ease 0.5s;
+  }
+  &:hover::after {
+    width: 80%;
+    height: 80%;
+  }
+}
+
