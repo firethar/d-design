@@ -43,9 +43,23 @@
       <div class="container">
         <h2>Galeria</h2>
         <div class="gallery__slider">
-          <div class="slider__item"><img src="./img/galeria-1-ponad-nami.png" alt=""></div>
-          <div class="slider__item item__active"><img src="./img/galeria-1-eternal.png" alt=""></div>
-          <div class="slider__item"><img src="./img/galeria-1-percepcja.png" alt=""></div>
+          <div class="slider__arrows">
+            <button class="slider__arrow slider__arrow--prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M0 12l10.975 11 2.848-2.828-6.176-6.176H24v-3.992H7.646l6.176-6.176L10.975 1 0 12z"></path>
+              </svg>
+            </button>
+            <button class="slider__arrow slider__arrow--next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="slides__wrapper">
+            <div class="slide__item"><img src="./img/galeria-1-ponad-nami.png" alt=""></div>
+            <div class="slide__item slide__item--active"><img src="./img/galeria-1-eternal.png" alt=""></div>
+            <div class="slide__item"><img src="./img/galeria-1-percepcja.png" alt=""></div>
+          </div>
         </div>
       </div>
     </div>
