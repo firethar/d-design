@@ -489,11 +489,28 @@ th {
   margin-top: 5px;
   color: #98474f; }
 
+.gallery .row {
+  max-width: 100%;
+  height: auto; }
+
+.gallery .container {
+  width: 100%;
+  max-width: 100%;
+  height: auto; }
+
 .gallery h2 {
   text-align: center; }
 
 .gallery .gallery__slider {
-  margin-top: 100px;
+  position: relative;
+  padding: 100px 0;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.gallery .slides__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,18 +521,51 @@ th {
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s; }
+  .gallery .slides__wrapper .slide__item {
+    width: 33vw; }
 
-.gallery .slider__item {
+.gallery .slide__item {
+  z-index: 1;
   -webkit-transform: scale(1);
-          transform: scale(1); }
-  .gallery .slider__item img {
+          transform: scale(1);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s; }
+  .gallery .slide__item img {
     max-width: 100%; }
+  .gallery .slide__item.slide__item--active {
+    z-index: 10;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4); }
 
-.gallery .slider__item.item__active {
-  z-index: 10;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4); }
+.gallery .slider__arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  background-color: #818999;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+  .gallery .slider__arrow:hover {
+    background-color: #6c6d6e; }
+  .gallery .slider__arrow svg {
+    margin-top: 4px; }
+
+.gallery .slider__arrow--prev {
+  left: 3rem; }
+
+.gallery .slider__arrow--next {
+  right: 3rem; }
 
 .knowledge {
   overflow: hidden; }
