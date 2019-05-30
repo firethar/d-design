@@ -75,4 +75,39 @@ function getActiveSlide() {
 }
 
 
+const overlayTriggers = document.querySelectorAll('.slide__overlay--trigger');
+
+overlayTriggers.forEach(function (trigger) {
+  trigger.addEventListener("click", function(event) {
+    event.preventDefault();
+    triggerOverlay(event.target.src);
+  }, false);
+});
+
+
+function triggerOverlay(imageSrc) {
+  let overlay = createOverlay(imageSrc);
+
+  document.body.appendChild(overlay);
+
+  overlay.addEventListener("click", function() {
+      document.body.removeChild(this);
+    }, false);
+}
+
+function createOverlay(src) {
+  const newOverlay = document.createElement("div");
+  const newImage = document.createElement("img");
+  const newButton = document.createElement("button");
+
+  newOverlay.classList.add('overlay__wrapper');
+  newImage.classList.add('overlay__image');
+  newImage.srcset = src;
+  newButton.classList.add('overlay__close');
+
+  newOverlay.appendChild(newImage);  
+  newOverlay.appendChild(newButton);  
+  return newOverlay;
+}
+
 })();
