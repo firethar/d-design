@@ -3,7 +3,8 @@
 @import '__mixins';
 
 
-@import '_header';
+@import '_top-nav';
+@import '_hero';
 @import '_bio';
 @import '_gallery';
 @import '_knowledge';
@@ -33,7 +34,9 @@ body {
   font-family: 'caviar_dreams', Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
-
+section {
+  position: relative;
+}
 .row {
   position: relative;
   max-width: 1920px;
