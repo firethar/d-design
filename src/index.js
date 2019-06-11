@@ -2,6 +2,25 @@ import styles from './_scss/main.scss';
 
 
 (function() {
+  
+  const navLinks = document.querySelectorAll('.top-nav a');
+
+	function scrollTo(element) {
+		element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start' 
+		});
+	}
+
+	navLinks.forEach( element => {
+		element.addEventListener('click', el => {
+      el.preventDefault();
+      scrollTo(document.querySelector(`#${el.target.dataset.scroll}`));
+		});
+	});
+
+
+
   // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
   if (!String.prototype.trim) {
     (function() {
