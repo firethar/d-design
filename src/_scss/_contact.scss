@@ -12,7 +12,7 @@
   background: rgba(85, 85, 85, 0.46);
   // width: 500px;
   // margin: 0 auto;
-  margin-left: 500px;
+  margin-left: 400px;
   box-sizing: border-box;
   padding: 20px 150px 50px;
   form {
@@ -27,11 +27,11 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -500px;
+    left: -600px;
     display: block;
-    width: 500px;
+    width: 600px;
     height: 100%;
-    background: transparent url('../img/contact-image.png') no-repeat center center;
+    background: transparent url('../img/envelope.png') no-repeat center center;
     background-size: contain;
   }
 }

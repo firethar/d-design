@@ -1,0 +1,36 @@
+.page-navigation {
+  position: fixed;
+  top:0;
+  left: 0;
+  display: flex; 
+  width: 100%;
+  height: 100px;
+  padding: 0 60px;
+  background: rgba($color: #000000, $alpha: 0.5);
+  overflow: hidden;
+  z-index: 100;
+    .top-nav {
+      display: flex;
+      width: 100%;
+      ul {
+        display: flex; 
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0; padding: 0; 
+        list-style: none;
+      }
+      li {
+        display: flex;
+        // width: 33vw;
+      }
+      a {
+        font-size: 24px;
+        line-height: 30px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+}
+
