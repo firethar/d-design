@@ -541,6 +541,9 @@ th {
   background-size: cover;
   background-position: center; }
 
+.mask-1 .hero__mask {
+  background-image: url(./img/hero-1.png); }
+
 .mask-1 .mask__part--1 {
   top: 28%;
   right: auto;
