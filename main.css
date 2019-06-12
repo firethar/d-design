@@ -461,6 +461,11 @@ th {
   .hero__slide:hover .mask--background {
     -webkit-transform: translate3d(0px, 0px, 60px);
             transform: translate3d(0px, 0px, 60px); }
+  .hero__slide:hover .hero__typo .typo__wrapper::before {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  .hero__slide:hover .hero__typo h2 {
+    visibility: visible; }
   .hero__slide.is-active {
     display: block;
     opacity: 1;
@@ -498,11 +503,34 @@ th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .hero__typo .typo__wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden; }
+    .hero__typo .typo__wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: #ffffff;
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+      -webkit-transition: all 2s ease;
+      transition: all 2s ease; }
   .hero__typo h2 {
+    margin: 0;
+    padding: 0;
     font-size: 100px;
     font-weight: bold;
     color: #ffffff;
-    text-transform: initial; }
+    text-transform: initial;
+    visibility: hidden;
+    -webkit-transition: all 0.1s ease .5s;
+    transition: all 0.1s ease .5s; }
 
 .hero__masks {
   position: absolute;
