@@ -501,7 +501,8 @@ th {
   .hero__typo h2 {
     font-size: 100px;
     font-weight: bold;
-    color: #ffffff; }
+    color: #ffffff;
+    text-transform: initial; }
 
 .hero__masks {
   position: absolute;
