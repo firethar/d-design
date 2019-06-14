@@ -129,4 +129,58 @@ function createOverlay(src) {
   return newOverlay;
 }
 
+function startSlidesLoop() {
+  // const activeHeroSlide = document.querySelector('.hero__slide.is-active'); 
+  const firstSlide = document.querySelector('.hero__slide:first-child');
+
+  if (firstSlide.classList == 'hero__slide is-active') {
+    //first slide is active, so start animation
+    animateSlide(firstSlide); 
+  } else {
+    //console.log('first slide not active');
+    activateSlide(firstSlide.nextElementSibling);
+  }
+}
+
+
+function animateSlide(activeSlide) {
+  setTimeout(() => {
+    activeSlide.classList.add('animate');
+  }, 50);
+
+  setTimeout(() => {
+    // console.log('Animation ended');
+    //remove active state with animation
+    activeSlide.classList.remove('is-active', 'animate');
+    //move to another slide and activate it
+    activateSlide(isLastSlide(activeSlide));       
+  }, 4000);
+}
+function isLastSlide(currentSlide) {
+  if (!currentSlide.nextElementSibling) {
+    //if is last slide, then return the first one
+    return document.querySelector('.hero__slide:first-child');
+  } else {
+    //return it
+    return currentSlide.nextElementSibling;
+  }
+}
+function activateSlide(slide) {
+  //check if it is not active
+  if (slide.classList == 'hero__slide') {
+    //activate it
+    slide.classList.add('is-active');
+    // and start animation
+    animateSlide(slide);
+  } 
+  else {
+    //slide already active
+    animateSlide(slide);
+  }
+}
+
+startSlidesLoop();
+
+
+
 })();
