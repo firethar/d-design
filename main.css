@@ -602,7 +602,7 @@ th {
   background-position: center; }
 
 .mask-1 .hero__mask {
-  background-image: url(./img/hero-1.png); }
+  background-image: url(./img/galery-image-1.jpg); }
 
 .mask-1 .mask__part--1 {
   top: 28%;
@@ -641,7 +641,7 @@ th {
   z-index: 4; }
 
 .mask-2 .hero__mask {
-  background-image: url(./img/hero-2.png); }
+  background-image: url(./img/galery-image-2.jpg); }
 
 .mask-2 .mask__part--1 {
   top: 0;
@@ -680,7 +680,7 @@ th {
   z-index: 4; }
 
 .mask-3 .hero__mask {
-  background-image: url(./img/hero-3.png); }
+  background-image: url(./img/galery-image-3.jpg); }
 
 .mask-3 .mask__part--1 {
   top: 28%;
