@@ -438,6 +438,37 @@ th {
     height: 100vh;
     overflow: hidden; }
 
+.hero__pagination {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  list-style: none; }
+  .hero__pagination li {
+    margin: 5px 10px;
+    display: block;
+    width: 6px;
+    height: 40px;
+    border-radius: 4px;
+    background: #5c5c5c;
+    line-height: 1rem;
+    text-indent: -999999px;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s; }
+    .hero__pagination li.is-active {
+      height: 50px;
+      background: #ffffff; }
+
 .hero__slide {
   position: absolute;
   top: 0;
