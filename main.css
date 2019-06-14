@@ -452,24 +452,24 @@ th {
   visibility: hidden;
   z-index: 0;
   background: #333; }
-  .hero__slide:hover .mask__part--1,
-  .hero__slide:hover .mask__part--2,
-  .hero__slide:hover .mask__part--3,
-  .hero__slide:hover .mask__part--4 {
-    -webkit-transform: translate3d(0px, 0px, 100px);
-            transform: translate3d(0px, 0px, 100px); }
-  .hero__slide:hover .mask--background {
-    -webkit-transform: translate3d(0px, 0px, 60px);
-            transform: translate3d(0px, 0px, 60px); }
-  .hero__slide:hover .hero__typo .typo__wrapper::before {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%); }
-  .hero__slide:hover .hero__typo h2 {
-    visibility: visible; }
   .hero__slide.is-active {
     display: block;
     opacity: 1;
     visibility: visible; }
+    .hero__slide.is-active.animate .mask__part--1,
+    .hero__slide.is-active.animate .mask__part--2,
+    .hero__slide.is-active.animate .mask__part--3,
+    .hero__slide.is-active.animate .mask__part--4 {
+      -webkit-transform: translate3d(0px, 0px, 100px);
+              transform: translate3d(0px, 0px, 100px); }
+    .hero__slide.is-active.animate .mask--background {
+      -webkit-transform: translate3d(0px, 0px, 60px);
+              transform: translate3d(0px, 0px, 60px); }
+    .hero__slide.is-active.animate .hero__typo .typo__wrapper::before {
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%); }
+    .hero__slide.is-active.animate .hero__typo h2 {
+      visibility: visible; }
 
 .hero__wrapper {
   position: absolute;
@@ -513,7 +513,7 @@ th {
       content: '';
       position: absolute;
       top: 0;
-      left: 0;
+      left: -1px;
       width: 200%;
       height: 100%;
       background: #ffffff;
@@ -601,6 +601,84 @@ th {
   z-index: 3; }
 
 .mask-1 .mask__part--4 {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 0;
+  height: 0;
+  z-index: 4; }
+
+.mask-2 .hero__mask {
+  background-image: url(./img/hero-2.png); }
+
+.mask-2 .mask__part--1 {
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  width: 44%;
+  height: 58%;
+  z-index: 1; }
+
+.mask-2 .mask__part--2 {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 30%;
+  width: 20%;
+  height: 46%;
+  z-index: 2; }
+
+.mask-2 .mask__part--3 {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 45%;
+  height: 55%;
+  z-index: 3; }
+
+.mask-2 .mask__part--4 {
+  top: 0;
+  right: 30%;
+  bottom: auto;
+  left: auto;
+  width: 12%;
+  height: 57%;
+  z-index: 4; }
+
+.mask-3 .hero__mask {
+  background-image: url(./img/hero-3.png); }
+
+.mask-3 .mask__part--1 {
+  top: 28%;
+  right: auto;
+  bottom: auto;
+  left: 10%;
+  width: 40%;
+  height: 40%;
+  z-index: 1; }
+
+.mask-3 .mask__part--2 {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 60%;
+  height: 43%;
+  z-index: 2; }
+
+.mask-3 .mask__part--3 {
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  width: 43%;
+  height: 45%;
+  z-index: 3; }
+
+.mask-3 .mask__part--4 {
   top: auto;
   right: 0;
   bottom: 0;
