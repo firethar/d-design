@@ -20,54 +20,64 @@
   <section class="hero">
     <div class="row">
       <div class="container">
-        <div class="hero__slide is-active">
-          <div class="hero__wrapper">
-            <div class="hero__masks mask-1" data-slide-bg="url(../img/hero-1.png)">
-              <div class="hero__mask mask__part--1"></div>
-              <div class="hero__mask mask__part--2"></div>
-              <div class="hero__mask mask__part--3"></div>
-              <div class="hero__mask mask__part--4"></div>
-              <div class="hero__mask mask--background"></div>
-            </div>
-            <div class="hero__typo">
-              <div class="typo__wrapper">
-                <h2>good idea</h2>
+
+        <div class="hero__slider">        
+          <div data-slide="1" class="hero__slide is-active">
+            <div class="hero__wrapper">
+              <div class="hero__masks mask-1" data-slide-bg="url(../img/hero-1.png)">
+                <div class="hero__mask mask__part--1"></div>
+                <div class="hero__mask mask__part--2"></div>
+                <div class="hero__mask mask__part--3"></div>
+                <div class="hero__mask mask__part--4"></div>
+                <div class="hero__mask mask--background"></div>
+              </div>
+              <div class="hero__typo">
+                <div class="typo__wrapper">
+                  <h2>good idea</h2>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="hero__slide">
-          <div class="hero__wrapper">
-            <div class="hero__masks mask-2" data-slide-bg="url(../img/hero-2.png)">
-              <div class="hero__mask mask__part--1"></div>
-              <div class="hero__mask mask__part--2"></div>
-              <div class="hero__mask mask__part--3"></div>
-              <div class="hero__mask mask__part--4"></div>
-              <div class="hero__mask mask--background"></div>
-            </div>
-            <div class="hero__typo">
-              <div class="typo__wrapper">
-                <h2>better idea</h2>
+          <div data-slide="2" class="hero__slide">
+            <div class="hero__wrapper">
+              <div class="hero__masks mask-2" data-slide-bg="url(../img/hero-2.png)">
+                <div class="hero__mask mask__part--1"></div>
+                <div class="hero__mask mask__part--2"></div>
+                <div class="hero__mask mask__part--3"></div>
+                <div class="hero__mask mask__part--4"></div>
+                <div class="hero__mask mask--background"></div>
+              </div>
+              <div class="hero__typo">
+                <div class="typo__wrapper">
+                  <h2>better idea</h2>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="hero__slide">
-          <div class="hero__wrapper">
-            <div class="hero__masks mask-3" data-slide-bg="url(../img/hero-3.png)">
-              <div class="hero__mask mask__part--1"></div>
-              <div class="hero__mask mask__part--2"></div>
-              <div class="hero__mask mask__part--3"></div>
-              <div class="hero__mask mask__part--4"></div>
-              <div class="hero__mask mask--background"></div>
-            </div>
-            <div class="hero__typo">
-              <div class="typo__wrapper">
-                <h2>best idea</h2>
+          <div data-slide="3" class="hero__slide">
+            <div class="hero__wrapper">
+              <div class="hero__masks mask-3" data-slide-bg="url(../img/hero-3.png)">
+                <div class="hero__mask mask__part--1"></div>
+                <div class="hero__mask mask__part--2"></div>
+                <div class="hero__mask mask__part--3"></div>
+                <div class="hero__mask mask__part--4"></div>
+                <div class="hero__mask mask--background"></div>
+              </div>
+              <div class="hero__typo">
+                <div class="typo__wrapper">
+                  <h2>best idea</h2>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+
+        </div> <!-- /hero__slider -->
+        <ul class="hero__pagination">
+          <li data-paginate="1" class="is-active">1</li>
+          <li data-paginate="2">2</li>
+          <li data-paginate="3">3</li>
+        </ul>
+
       </div>
     </div>
   </section>

@@ -152,6 +152,8 @@ function animateSlide(activeSlide) {
     // console.log('Animation ended');
     //remove active state with animation
     activeSlide.classList.remove('is-active', 'animate');
+    const activePaginate = document.querySelector('.hero__pagination .is-active');
+    activePaginate ? activePaginate.classList.remove('is-active') : false;
     //move to another slide and activate it
     activateSlide(isLastSlide(activeSlide));       
   }, 4000);
@@ -170,6 +172,7 @@ function activateSlide(slide) {
   if (slide.classList == 'hero__slide') {
     //activate it
     slide.classList.add('is-active');
+    paginate(slide);
     // and start animation
     animateSlide(slide);
   } 
@@ -177,6 +180,10 @@ function activateSlide(slide) {
     //slide already active
     animateSlide(slide);
   }
+}
+
+function paginate(currentSlide){
+  document.querySelector(`[data-paginate="${currentSlide.dataset.slide}"]`).classList.add('is-active');
 }
 
 startSlidesLoop();
