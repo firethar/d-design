@@ -718,6 +718,84 @@ th {
   height: 0;
   z-index: 4; }
 
+.mask-4 .hero__mask {
+  background-image: url(./img/hero-1.png); }
+
+.mask-4 .mask__part--1 {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 30%;
+  height: 40%;
+  z-index: 1; }
+
+.mask-4 .mask__part--2 {
+  top: 21%;
+  right: auto;
+  bottom: auto;
+  left: 53%;
+  width: 15%;
+  height: 20%;
+  z-index: 2; }
+
+.mask-4 .mask__part--3 {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 7%;
+  width: 50%;
+  height: 52%;
+  z-index: 3; }
+
+.mask-4 .mask__part--4 {
+  top: 1%;
+  right: auto;
+  bottom: auto;
+  left: 22%;
+  width: 25%;
+  height: 65%;
+  z-index: 4; }
+
+.mask-5 .hero__mask {
+  background-image: url(./img/hero-2.png); }
+
+.mask-5 .mask__part--1 {
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  width: 44%;
+  height: 18%;
+  z-index: 1; }
+
+.mask-5 .mask__part--2 {
+  top: 0;
+  right: 20%;
+  bottom: auto;
+  left: auto;
+  width: 17%;
+  height: 57%;
+  z-index: 2; }
+
+.mask-5 .mask__part--3 {
+  top: auto;
+  right: auto;
+  bottom: 15%;
+  left: 0;
+  width: 45%;
+  height: 45%;
+  z-index: 3; }
+
+.mask-5 .mask__part--4 {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 30%;
+  width: 41%;
+  height: 66%;
+  z-index: 4; }
+
 .bio__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -920,21 +998,21 @@ th {
     .knowledge__quote::before {
       content: '';
       position: absolute;
-      left: 0;
-      width: 40%;
+      left: -10%;
+      width: 50%;
       height: 100%;
       background: transparent url(./img/knowledge-left.png) no-repeat center center;
-      background-size: cover;
+      background-size: contain;
       z-index: -1; }
     .knowledge__quote::after {
       content: '';
       position: absolute;
       top: 0;
-      right: 0;
-      width: 40%;
+      right: -10%;
+      width: 50%;
       height: 100%;
       background: transparent url(./img/knowledge-right.png) no-repeat center center;
-      background-size: cover;
+      background-size: contain;
       z-index: -1; }
 
 .form-wrapper {
