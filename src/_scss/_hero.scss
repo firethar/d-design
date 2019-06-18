@@ -272,6 +272,7 @@
       }
     }
   }
+
   &-3 {
     & .hero__mask {
       background-image: url(../img/galery-image-3.jpg);
@@ -315,5 +316,91 @@
       }
     }
   }
-  
+  &-4 {
+    & .hero__mask {
+      background-image: url(../img/hero-1.png);
+    }
+    .mask__part {
+      &--1 {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: 30%;
+        height: 40%;
+        z-index: 1;
+      }
+      &--2 {
+        top: 21%;
+        right: auto;
+        bottom: auto;
+        left: 53%;
+        width: 15%;
+        height: 20%;
+        z-index: 2;
+      }
+      &--3 {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 7%;
+        width: 50%;
+        height: 52%;
+        z-index: 3;
+      }
+      &--4 {
+        top: 1%;
+        right: auto;
+        bottom: auto;
+        left: 22%;
+        width: 25%;
+        height: 65%;
+        z-index: 4;
+      }
+    }
+  }
+
+  &-5 {
+    & .hero__mask {
+      background-image: url(../img/hero-2.png);
+    }
+    .mask__part {
+      &--1 {
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        width: 44%;
+        height: 18%;
+        z-index: 1;
+      }
+      &--2 {
+        top: 0;
+        right: 20%;
+        bottom: auto;
+        left: auto;
+        width: 17%;
+        height: 57%;
+        z-index: 2;
+      }
+      &--3 {
+        top: auto;
+        right: auto;
+        bottom: 15%;
+        left: 0;
+        width: 45%;
+        height: 45%;
+        z-index: 3;
+      }
+      &--4 {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 30%;
+        width: 41%;
+        height: 66%;
+        z-index: 4;
+      }
+    }
+  }
 }
