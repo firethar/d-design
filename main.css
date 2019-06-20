@@ -430,17 +430,17 @@ th {
 .hero {
   position: relative;
   margin: 0;
-  padding: 0;
-  -webkit-box-shadow: black 5px 5px 20px 0px;
-          box-shadow: black 5px 5px 20px 0px; }
+  padding: 0; }
   .hero .row {
-    margin: 0 auto; }
+    margin-bottom: 400px; }
   .hero .container {
     position: relative;
     max-width: 100%;
     width: 100%;
     height: 100vh;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-box-shadow: black 5px 5px 20px 0px;
+            box-shadow: black 5px 5px 20px 0px; }
 
 .hero__pagination {
   position: absolute;
@@ -810,8 +810,7 @@ th {
       align-content: space-around;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 400px; }
+          justify-content: center; }
 
 .bio__image {
   margin: 0 50px;
