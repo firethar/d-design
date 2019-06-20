@@ -189,5 +189,29 @@ function paginate(currentSlide){
 startSlidesLoop();
 
 
+//SVG PATH
+// getting the length of the svg path
+const svg = document.getElementById("theMotionPath");
+const length = svg.getTotalLength();
+// console.log('body: ', document.body.scrollHeight);
+// start position of the drawing - normal display pre-animation
+// console.log('strokeDasharray: ', svg.style.strokeDasharray);
+// console.log('svg lenght: ', length);
+// console.log('svg height: ', svg.length);
+svg.style.strokeDasharray = length;
+
+// hides the svg before the scrolling starts
+svg.style.strokeDashoffset = length;
+
+// offset the svg dash by the same amount as the percentage scrolled
+window.addEventListener("scroll", function () {
+  const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+  const draw = length * scrollpercent;
+  // console.log(document.documentElement.clientHeight);
+
+  // Reverse the drawing (when scrolling upwards)
+  svg.style.strokeDashoffset = length - draw ;
+
+});
 
 })();
