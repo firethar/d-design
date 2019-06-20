@@ -1,9 +1,9 @@
 .hero {
   position: relative;
-  
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  // overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 1) 5px 5px 20px 0px;
 
   .container {
     position: relative;
@@ -27,10 +27,10 @@
     align-content: flex-end;
     list-style: none;
     li {
-      margin: 5px 10px;
+      margin: 5px;
       display: block;
       width: 6px;
-      height: 40px;
+      height: 23px;
       border-radius: 4px;
       background: #5c5c5c;
       line-height: 1rem;
@@ -40,11 +40,11 @@
       &.is-active {
         // font-size: 2rem;
         // font-weight: bold;
-        height: 50px;
+        // height: 50px;
         background: #ffffff;
       }
     }
-    
+
   }
   &__slide {
     position: absolute;
@@ -63,11 +63,11 @@
       display: block;
       opacity: 1;
       visibility: visible;
-    
+
       &.animate {
-        .mask__part--1, 
-        .mask__part--2, 
-        .mask__part--3, 
+        .mask__part--1,
+        .mask__part--2,
+        .mask__part--3,
         .mask__part--4 {
           transform: translate3d(0px, 0px, 100px);
         }
