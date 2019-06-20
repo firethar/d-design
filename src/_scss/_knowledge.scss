@@ -1,37 +1,47 @@
 .knowledge {
   overflow: hidden;
-}
-.knowledge__quote {
-  width: 50%;
-  margin: 0 auto;
-  p {
-    font-size: 40px;
-    text-align: center;
+  
+  article {
+    
   }
+  
+  &__quote {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    min-height: 720px;
+    width: 530px;
+    margin: 0 auto;
+    p {
+      font-size: 26px;
+      line-height: 36px;
+      text-align: center;
+    }
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: -5%;
-    width: 35%;
-    height: 100%;
-    background: transparent url(../img/knowledge-1.png) no-repeat center center;
-    background-size: cover;
-    -webkit-mask-image:-webkit-gradient(linear, center center, right center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
-    z-index: -1;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -5%;
-    width: 35%;
-    height: 100%;
-    background: transparent url(../img/knowledge-2.png) no-repeat center center;
-    background-size: cover;
-    -webkit-mask-image:-webkit-gradient(linear, center center, left center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
-    z-index: -1;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10%;
+      width: 50%;
+      height: 100%;
+      background: transparent url(../img/knowledge-left.png) no-repeat center center;
+      background-size: contain;
+      // -webkit-mask-image:-webkit-gradient(linear, center center, right center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      // mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -10%;
+      width: 50%;
+      height: 100%;
+      background: transparent url(../img/knowledge-right.png) no-repeat center center;
+      background-size: contain;
+      // -webkit-mask-image:-webkit-gradient(linear, center center, left center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      // mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+      z-index: -1;
+    }
   }
 }

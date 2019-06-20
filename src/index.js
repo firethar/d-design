@@ -2,6 +2,25 @@ import styles from './_scss/main.scss';
 
 
 (function() {
+  
+  const navLinks = document.querySelectorAll('.top-nav a');
+
+	function scrollTo(element) {
+		element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start' 
+		});
+	}
+
+	navLinks.forEach( element => {
+		element.addEventListener('click', el => {
+      el.preventDefault();
+      scrollTo(document.querySelector(`#${el.target.dataset.scroll}`));
+		});
+	});
+
+
+
   // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
   if (!String.prototype.trim) {
     (function() {
@@ -109,5 +128,66 @@ function createOverlay(src) {
   newOverlay.appendChild(newButton);  
   return newOverlay;
 }
+
+function startSlidesLoop() {
+  // const activeHeroSlide = document.querySelector('.hero__slide.is-active'); 
+  const firstSlide = document.querySelector('.hero__slide:first-child');
+
+  if (firstSlide.classList == 'hero__slide is-active') {
+    //first slide is active, so start animation
+    animateSlide(firstSlide); 
+  } else {
+    //console.log('first slide not active');
+    activateSlide(firstSlide.nextElementSibling);
+  }
+}
+
+
+function animateSlide(activeSlide) {
+  setTimeout(() => {
+    activeSlide.classList.add('animate');
+  }, 50);
+
+  setTimeout(() => {
+    // console.log('Animation ended');
+    //remove active state with animation
+    activeSlide.classList.remove('is-active', 'animate');
+    const activePaginate = document.querySelector('.hero__pagination .is-active');
+    activePaginate ? activePaginate.classList.remove('is-active') : false;
+    //move to another slide and activate it
+    activateSlide(isLastSlide(activeSlide));       
+  }, 4000);
+}
+function isLastSlide(currentSlide) {
+  if (!currentSlide.nextElementSibling) {
+    //if is last slide, then return the first one
+    return document.querySelector('.hero__slide:first-child');
+  } else {
+    //return it
+    return currentSlide.nextElementSibling;
+  }
+}
+function activateSlide(slide) {
+  //check if it is not active
+  if (slide.classList == 'hero__slide') {
+    //activate it
+    slide.classList.add('is-active');
+    paginate(slide);
+    // and start animation
+    animateSlide(slide);
+  } 
+  else {
+    //slide already active
+    animateSlide(slide);
+  }
+}
+
+function paginate(currentSlide){
+  document.querySelector(`[data-paginate="${currentSlide.dataset.slide}"]`).classList.add('is-active');
+}
+
+startSlidesLoop();
+
+
 
 })();
