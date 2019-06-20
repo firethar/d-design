@@ -881,7 +881,9 @@ th {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s; }
+  transition: all ease 0.5s;
+  -webkit-box-shadow: black 0px 0px 20px 0px;
+          box-shadow: black 0px 0px 20px 0px; }
   .gallery .slide__item img {
     max-width: 100%; }
   .gallery .slide__item.slide__item--active {
@@ -1195,6 +1197,9 @@ html {
           box-sizing: border-box;
   height: auto;
   min-height: 100%; }
+
+img {
+  display: block; }
 
 *,
 *:before,
