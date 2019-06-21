@@ -27,7 +27,9 @@ img {
     -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
-
+::-webkit-scrollbar { 
+  display: none; 
+}
 body {
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -41,6 +43,7 @@ body {
   width: 100%;
   margin: 0 auto;
   max-width: 1920px;
+  overflow-x: hidden;
 }
 section {
   position: relative;
@@ -104,5 +107,21 @@ h2 {
   #theMotionPath {
     fill:none;stroke:#736357a9;stroke-width:5;stroke-miterlimit:10;
 
+  }
+}
+#moon {
+  background: transparent;
+  position: absolute;
+  top:0; left:0;
+  z-index: -1;
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-left: -35px;
+  margin-top: -35px;
+  // transform: translate(0);
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }

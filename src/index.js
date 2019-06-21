@@ -192,6 +192,8 @@ startSlidesLoop();
 //SVG PATH
 // getting the length of the svg path
 const svg = document.getElementById("theMotionPath");
+console.log(svg.points);
+
 const length = svg.getTotalLength();
 // console.log('body: ', document.body.scrollHeight);
 // start position of the drawing - normal display pre-animation
@@ -210,8 +212,17 @@ window.addEventListener("scroll", function () {
   console.log(draw);
 
   // Reverse the drawing (when scrolling upwards)
+  // svg.style.strokeDashoffset = length - draw;
   svg.style.strokeDashoffset = length - draw;
 
+  // Get the position of a point at <scrollPercentage> along the path.
+  var pt = svg.getPointAtLength(scrollpercent * length + 1000);
+  
+  // Position the red dot at this point
+  var moon = document.getElementById("moon");
+  // moon.setAttribute("transform", "translate("+ pt.x + "px," + pt.y + "px)");
+  moon.style.transform = `translate(${pt.x}px, ${pt.y}px)`;
+  // div.style.transform = "translate(x,y)"
 });
 
 })();
