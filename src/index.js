@@ -206,11 +206,11 @@ svg.style.strokeDashoffset = length;
 // offset the svg dash by the same amount as the percentage scrolled
 window.addEventListener("scroll", function () {
   const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-  const draw = length * scrollpercent;
-  // console.log(document.documentElement.clientHeight);
+  const draw = length * scrollpercent + 1000;
+  console.log(draw);
 
   // Reverse the drawing (when scrolling upwards)
-  svg.style.strokeDashoffset = length - draw ;
+  svg.style.strokeDashoffset = length - draw;
 
 });
 
