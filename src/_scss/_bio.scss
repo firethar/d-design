@@ -20,6 +20,9 @@
     margin: 50px 0;
     font-size: 26px;
     line-height: 36px;
+    @include bp('max', 1365px ){
+      font-size: 22px;
+    }
   }
   .bio__footer {
     font-size: 18px;
