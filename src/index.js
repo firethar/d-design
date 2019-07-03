@@ -85,7 +85,7 @@ slideArrowNext.addEventListener('click', (el) => {
 });
 
 function moveSlides(direction) {
-  direction == 'prev' ? currentStep += 33 : currentStep -= 33;    
+  direction == 'prev' ? currentStep += 33.33 : currentStep -= 33.33;    
   slidesWrapper.style.transform = `translateX(${currentStep}vw)`;
 }
 
@@ -192,37 +192,58 @@ startSlidesLoop();
 //SVG PATH
 // getting the length of the svg path
 const svg = document.getElementById("theMotionPath");
-console.log(svg.points);
+// console.log(svg.points);
 
-const length = svg.getTotalLength();
+// adjusting the SVG height and width to fit the body
+const totalSvgHeight = document.body.clientHeight - document.documentElement.clientHeight * 0.5;
+
+svg.points[0].x = document.documentElement.clientWidth;
+svg.points[0].y = 0;
+
+svg.points[1].x = 0;
+svg.points[1].y = totalSvgHeight * 0.19;
+
+svg.points[2].x = document.documentElement.clientWidth;
+svg.points[2].y = totalSvgHeight * 0.40;
+
+svg.points[3].x = 0;
+svg.points[3].y = totalSvgHeight * 0.60;
+
+svg.points[4].x = document.documentElement.clientWidth;
+svg.points[4].y = totalSvgHeight * 0.83;
+
+svg.points[5].x = 0;
+svg.points[5].y = totalSvgHeight;
+
+const svgLength = svg.getTotalLength();
 // console.log('body: ', document.body.scrollHeight);
-// start position of the drawing - normal display pre-animation
 // console.log('strokeDasharray: ', svg.style.strokeDasharray);
 // console.log('svg lenght: ', length);
 // console.log('svg height: ', svg.length);
-svg.style.strokeDasharray = length;
+
+// start position of the drawing - normal display pre-animation
+svg.style.strokeDasharray = svgLength;
 
 // hides the svg before the scrolling starts
-svg.style.strokeDashoffset = length;
+svg.style.strokeDashoffset = svgLength;
 
 // offset the svg dash by the same amount as the percentage scrolled
 window.addEventListener("scroll", function () {
   const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-  const draw = length * scrollpercent + 1000;
-  console.log(draw);
+  console.log(scrollpercent);
+  const draw = svgLength * scrollpercent + document.documentElement.clientHeight * 0.5;
+  // console.log(draw);
 
   // Reverse the drawing (when scrolling upwards)
-  // svg.style.strokeDashoffset = length - draw;
-  svg.style.strokeDashoffset = length - draw;
+  svg.style.strokeDashoffset = svgLength - draw;
 
   // Get the position of a point at <scrollPercentage> along the path.
-  var pt = svg.getPointAtLength(scrollpercent * length + 1000);
+  var pt = svg.getPointAtLength(draw - 35);
   
-  // Position the red dot at this point
+  // Position the moon at this point
   var moon = document.getElementById("moon");
-  // moon.setAttribute("transform", "translate("+ pt.x + "px," + pt.y + "px)");
   moon.style.transform = `translate(${pt.x}px, ${pt.y}px)`;
-  // div.style.transform = "translate(x,y)"
+
 });
 
 })();
