@@ -827,6 +827,9 @@ th {
   margin: 50px 0;
   font-size: 26px;
   line-height: 36px; }
+  @media only screen and (max-width: 1365px) {
+    .bio__copy {
+      font-size: 22px; } }
 
 .bio__footer {
   font-size: 18px; }
@@ -997,10 +1000,17 @@ th {
     min-height: 720px;
     width: 530px;
     margin: 0 auto; }
+    @media only screen and (max-width: 1365px) {
+      .knowledge__quote {
+        min-height: 550px;
+        width: 480px; } }
     .knowledge__quote p {
       font-size: 26px;
       line-height: 36px;
       text-align: center; }
+      @media only screen and (max-width: 1365px) {
+        .knowledge__quote p {
+          font-size: 21px; } }
     .knowledge__quote::before {
       content: '';
       position: absolute;
@@ -1010,6 +1020,9 @@ th {
       background: transparent url(./img/knowledge-left.png) no-repeat center center;
       background-size: contain;
       z-index: -1; }
+      @media only screen and (max-width: 1365px) {
+        .knowledge__quote::before {
+          left: -600px; } }
     .knowledge__quote::after {
       content: '';
       position: absolute;
@@ -1020,6 +1033,9 @@ th {
       background: transparent url(./img/knowledge-right.png) no-repeat center center;
       background-size: contain;
       z-index: -1; }
+      @media only screen and (max-width: 1365px) {
+        .knowledge__quote::after {
+          right: -600px; } }
 
 .form-wrapper {
   display: -webkit-box;
@@ -1038,9 +1054,12 @@ th {
 .contact__form {
   position: relative;
   background: rgba(85, 85, 85, 0.46) url(./img/page-bg.png) center top no-repeat;
-  margin-left: 400px;
+  margin-left: 600px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+  @media only screen and (max-width: 1365px) {
+    .contact__form {
+      margin-left: 500px; } }
   .contact__form h2 {
     margin: 0;
     padding: 50px 150px 30px;
@@ -1059,6 +1078,9 @@ th {
             align-items: stretch;
     -ms-flex-line-pack: center;
         align-content: center; }
+    @media only screen and (max-width: 1365px) {
+      .contact__form form {
+        padding: 0px 100px 50px; } }
   .contact__form::before {
     content: '';
     position: absolute;
@@ -1068,7 +1090,12 @@ th {
     width: 600px;
     height: 100%;
     background: transparent url(./img/envelope.png) no-repeat center center;
-    background-size: contain; }
+    background-size: cover; }
+    @media only screen and (max-width: 1365px) {
+      .contact__form::before {
+        left: -500px;
+        display: block;
+        width: 500px; } }
 
 .form__inner-wrapper {
   display: -webkit-box;
